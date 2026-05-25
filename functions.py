@@ -10,14 +10,25 @@ class Letter:
         self.set_exclam_marks_num(self)
 
     def set_shift_letters_num(self):
-        shift_letters_num = 0
+        #shift_letters_num = 0
+
+        text = self.text
+        upper = sum(1 for c in text if c.isupper())
+        total = sum(1 for c in text if c.isalpha())
+        self._shift_letters_num = upper / total if total > 0 else 0
         # Тут надо написать функцию, которая считает отношение букв верхнего регистра к общему числу букв
-        self._shift_letters_num = shift_letters
+        #self._shift_letters_num = shift_letters
 
     def set_exclam_marks_num(self):
-        exclam_marks_num = 0
+        #exclam_marks_num = 0
+
+        text = self.text
+        if len (text) == 0:
+            return 0
+        exclam_count = text.count('!')
+        self.exclam_marks_num = exclam_count/len(text)
         # Тут надо написать функцию, которая считает отношение кол-ва "!" ко всем символам
-        self._exclam_marks_num = exclam_marks_num
+        #self._exclam_marks_num = exclam_marks_num
 
 
     # Вот тут надо с помощью spacy сделать токенизацию + лемматизацию текста
