@@ -29,10 +29,11 @@ class Letter:
         self.exclam_marks_num = exclam_count/len(text)
         # Тут надо написать функцию, которая считает отношение кол-ва "!" ко всем символам
         #self._exclam_marks_num = exclam_marks_num
-
-
-    # Вот тут надо с помощью spacy сделать токенизацию + лемматизацию текста
-
+        
+    doc = nlp(self.text)
+    lemmas_list = []
+    for lemma in doc:
+        lemmas_list.append(token.lemma_)
 
     def count_strange_words_num(self):
         strange_words_num = 0
@@ -71,3 +72,4 @@ def get_letter_by_user(self, user_file_name):
     # Если же расширение уже есть, но оно не .txt ==> пока что поднимаем ошибку
 
     # return text - как-то так должна выглядеть строка с возвратом результата
+
