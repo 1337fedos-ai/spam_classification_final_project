@@ -9,7 +9,15 @@ instant
 win
 free
 prize
+income
+cheap
+money
+billion
+credit
+guaranteed
+verify
 giveaway
+required
 miracle
 amazing
 unbelievable
@@ -30,7 +38,7 @@ exclusive
 срочный
 бесплатно
 заявка
-миллионы
+миллион
 пароль
 новинка
 супер
@@ -39,7 +47,9 @@ exclusive
 удивительный
 удачный
 успех
-подарки
+подарок
+кредитный
+шанс
 известный
 немедленно
 гарантия
@@ -60,5 +70,5 @@ exclusive
 выбирать 
 забирать
 восстановить 
-
+балл
 
