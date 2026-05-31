@@ -1,13 +1,21 @@
 import functions
 
-user_file_name = input("Пожалуйста, введите имя файла с расширением .txt, который содержит текст вашего письма")
+print("Файл с текстом вашего письма находится в текущей папке?")
+print("1. Да / 2. Нет")
+ans = input("Введите цифру, обозначающую ответ на вопрос выше: ")
 
+while ans != "1":
+    print("Пожалуйста, скопируйте файл в текущую папку и попробуйте снова")
+    print("______________________________________________________________")
+    print("Файл с текстом вашего письма находится в текущей папке?")
+    print("1. Да / 2. Нет")
+    ans = input("Введите цифру, обозначающую ответ на вопрос выше: ")
+
+
+path = input('Отлично! Теперь введите полное имя файла с текстом письма в кавычках, например, "mail.txt": ')
 try:
-    functions.get_letter_by_user(user_file_name)
+    functions.get_letter_by_user(path)
 except Exception:
-    print("Что-то пошло не так")
-else:
-    user_letter = functions.Letter(user_file_name)
-    print(functions.is_spam(user_letter))
+    print("Что-то пошло не так! Попробуйте заново!")
 finally:
-    pass
+    print("До скорой встречи!")
